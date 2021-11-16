@@ -1,23 +1,8 @@
-/**
- *Submitted for verification at BscScan.com on 2021-06-27
-*/
-
-/*
-
-██████████████████████████████████████████████████████████████████████
-█▄─▄▄─█▄─▄███─▄▄─█▄─██─▄█▄─▄▄▀█▄─▄█─▄▄▄▄█─█─███─▄▄▄─█─▄▄─█▄─▄█▄─▀█▄─▄█
-██─▄████─██▀█─██─██─██─███─▄─▄██─██▄▄▄▄─█─▄─███─███▀█─██─██─███─█▄▀─██
-▀▄▄▄▀▀▀▄▄▄▄▄▀▄▄▄▄▀▀▄▄▄▄▀▀▄▄▀▄▄▀▄▄▄▀▄▄▄▄▄▀▄▀▄▀▀▀▄▄▄▄▄▀▄▄▄▄▀▄▄▄▀▄▄▄▀▀▄▄▀
-
-website: https://www.Flourish-Coin.com
-telegram: https://t.me/flourishcoin
-twitter: https://twitter.com/flourishcoin
-
-Flourish features are
+Broken Thumb features are
     
 1) 3% tax is collected and distributed to holders for HODLing
 2) 7% buyback and marketing tax is collected
-3) 2% sent charity wallet
+3) 3% sent to charity wallet
     
 */
 
@@ -435,7 +420,7 @@ contract FlourishCoin is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
     
-    address payable public marketingAddress = payable(0xeE33294F2743a811A75fFfcA95ac480De77Be528); // Marketing Address
+    address payable public marketingAddress = payable(0x6fE948de6A195A6AF61116338E30AAE5029669C6); // Marketing Address
     address public immutable deadAddress = 0x000000000000000000000000000000000000dEaD;
     mapping (address => uint256) private _rOwned;
     mapping (address => uint256) private _tOwned;
@@ -450,9 +435,9 @@ contract FlourishCoin is Context, IERC20, Ownable {
     uint256 private _tTotal = 1000000000 * 10**6 * 10**9;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
-
-    string private _name = "Flourish";
-    string private _symbol = "FLRS";
+    
+    string private _name = "Broken Thumb (https://t.me/BrokenThumb) ";
+    string private _symbol = "BT";
     uint8 private _decimals = 9;
 
 
@@ -464,8 +449,8 @@ contract FlourishCoin is Context, IERC20, Ownable {
     
     uint256 public marketingDivisor = 4;
 
-    uint256 public _charityFee = 2;
-    address public charityWallet = 0x4fEc1CD27B4eA1A91D52C5143446B671eE74382d;
+    uint256 public _charityFee = 3;
+    address public charityWallet = 0xDF5659b02b7B8c425b73aE89f118197a492Aab88;
     uint256 private _previousCharityFee = _charityFee;
     
     uint256 public _maxTxAmount = 1000000 * 10**6 * 10**9;
